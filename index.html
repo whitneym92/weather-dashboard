@@ -11,6 +11,32 @@
 
 </head>
 <body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 centered">Weather Dashboard</h1>
+        </div>
+    </div>
+    <main class="row">
+        <aside class="sidebar col-sm-12 col-md-3">
+            <form id="search-form">
+                <label for="city-input"><h4>Type in a city:</h4></label><br/>
+                <div class="form-group form-inline">
+                    <input type="text" class="form-control" id="city-input"/>
+                    <button type="submit" class="btn btn-info" id="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <p>Recent Searches:</p>
+                <div id="recent-searches">
+                    <ul class="city-holder list-group">
+                        <!--Searches will go here-->
+                    </ul>
+                </div>
+            </form>
+        </aside>
+    </main>
+
+  
 
     
 
