@@ -1,4 +1,4 @@
-/*Creating my variables*/
+//Creating my variables
 $(document).ready(function() {
     var APIKey= "cc3550ca747909c191efae6397fdaa94";
     var cityDisplayEl = document.querySelector(".city-holder");
@@ -13,6 +13,20 @@ $(document).ready(function() {
     var iconEl= document.getElementById("weather.icon");
     var forecastDivs = document.querySelectorAll(".forecast");
     var title = document.querySelector("title");
+
+    //function to queryUrl
+    function getWeatherInfo(cityName){
+        var queryURl= "https://api.openweather.org/data/2.5/forecast?q=" + cityName + "&appid=" + APIKey;
+
+    //Ajax request for current weather
+    $.ajax({
+        url: queryURl,
+        method: "GET",
+    }).then(function (response) {
+        console.log(response);
+    }
+
+    }
 
     
 
