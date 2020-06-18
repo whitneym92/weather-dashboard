@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css"/>
-
-</head>
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4 centered">Weather Dashboard</h1>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row header">
+        <div class="col-sm-12">
+          <h1>Weather Dashboard</h1>
         </div>
-    </div>
-    <main class="row">
-        <!--Sidebar where search happens-->
+      </div>
+      <main class="row">
         <aside class="sidebar col-sm-12 col-md-3">
-            <form id="search-form">
-                <label for="city-input"><h4>Type in a city:</h4></label><br/>
-                <div class="form-group form-inline">
-                    <input type="text" class="form-control" id="city-input"/>
-                    <button type="submit" class="btn btn-info" id="search">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-                <p>Recent Searches:</p>
-                <div id="recent-searches">
-                    <ul class="city-holder list-group">
-                        <!--Searches will go here-->
-                    </ul>
-                </div>
-            </form>
+          <form id="search-form">
+            <label for="city-input"> <h4>Search for a city:</h4> </label><br />
+            <div class="form-group form-inline">
+              <input type="text" class="form-control" id="city-input" />
+              <button type="submit" class="btn btn-primary" id="search">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <p>Recent searches:</p>
+            <div id="recent-searches">
+              <ul class="cities-holder list-group">
+                <!--Recent searches go here-->
+              </ul>
+            </div>
+          </form>
         </aside>
-        <!--Section where weather will be inputed-->
         <article class="weather-details col-sm-12 col-md-9">
-            <section class="details-section">
-                <div id="current-weather">
-                    <h4 id="city">
-                        <span id="current-city">
-                            Search to the left to view the forecast.
-                        </span>
-                        <span id="current-date"></span>
-                        <span id="weather-icon"></span>
-                    </h4>
-                    <div id="temp"></div>
-                    <div id="humidity"></div>
-                    <div id="wind"></div>
-                    <div id="uv-index"></div>
-                </div>
-            </section>
-            <!--Section where 5-day forecast will be inputed-->
-            <section class="details-section">
-                <h4>5-Day Forecast:</h4>
-                <div class="row" id="forecast-container">
-                    <div class="col-6 col-md-2 forecast"></div>
-                    <div class="col-6 col-md-2 forecast"></div>
-                    <div class="col-6 col-md-2 forecast"></div>
-                    <div class="col-6 col-md-2 forecast"></div>
-                    <div class="col-6 col-md-2 forecast"></div>
-                </div>
-            </section>
+          <section class="details-section">
+            <div id="current-weather">
+              <h2 id="city">
+                <span id="current-city">Lets look up a city!</span
+                ><span id="current-date"></span><span id="weather-icon"></span>
+              </h2>
+              <div id="temp"></div>
+              <div id="humidity"></div>
+              <div id="wind"></div>
+              <div id="uv-index"></div>
+            </div>
+          </section>
+          <section class="details-section">
+            <h4>5-Day Forecast:</h4>
+            <div class="row" id="forecast-container">
+              <div class="col-6 col-md-2 forecast"></div>
+              <div class="col-6 col-md-2 forecast"></div>
+              <div class="col-6 col-md-2 forecast"></div>
+              <div class="col-6 col-md-2 forecast"></div>
+              <div class="col-6 col-md-2 forecast"></div>
+            </div>
+          </section>
         </article>
-    </main>
+      </main>
+    </div>
 
-  
-
-    
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js" rel="stylesheet"></script> 
-</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
